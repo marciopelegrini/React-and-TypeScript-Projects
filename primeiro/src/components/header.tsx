@@ -1,9 +1,13 @@
 import './header.css'
 
-export function Header(){
+interface HeaderProps{
+    title?: string;
+}
+
+export function Header({ title = "Curso de React + TypeScript" }: HeaderProps){
     return(
         <header className="header">
-            <h1 className="title">Alunos do React + TypeScript</h1>
+            <h1 className="title">{title}</h1>
         </header>
     )
 }
